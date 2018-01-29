@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin:100px auto;
+
+            transition:all 2s ease-out;
+            color:#fff;
+            font-size:50px;
+
+        }
+
+
+        /* rotate（角度） 旋转
+            正值 顺时针
+            赋值：逆时针
+        */
+        .box:hover{
+            transform: rotate(360deg);
+        }
+        
+
+        .out{
+            width: 300px;
+            height: 150px;
+            background-color: pink;
+            margin-top:200px;
+            text-align: center;
+            line-height: 150px;      /* 垂直居中 */
+            position: relative;		 /* 定位参考点 */
+        }
+
+        .out::before{
+            content:"";
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+			
+			
+            position: absolute;
+            left: 40%;
+            top: -15px;
+			transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+	
+    
+    <h3 class="out">障眼法</h3>
+    
+    <div class="box">1</div>
+
+    <div class="out">
+
+    </div>
+    
+    
+
+</body>
+</html>

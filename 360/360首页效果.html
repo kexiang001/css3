@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{list-style: none;}
+			img{border: none;}
+			
+			.container {
+				width: 100%;
+				height: 100vh;
+			}
+			
+			.section{
+				position: relative;
+				/*display: flex;*/
+			}
+			/*第一页*/
+			.first-t{
+				height: 186px;
+				width: 251px;
+				margin: 30px auto;
+				
+			}
+			.first-m{
+				margin: 0 auto;
+				height: 100px;
+				width: 1100px;
+				margin-top:40px ;
+				
+			}
+			.first-m ul{
+				display: flex;
+				justify-content: center;
+				justify-content: space-around;
+			}
+			.first-m ul li{
+				margin: 0 10px;
+				
+			}
+			
+			/*.first-m:hover{
+				width: 800px;
+			}*/
+			.first-d{
+				margin: 40px auto;
+				width: 750px;
+			}
+			/*第二页*/
+			.second-l{
+				width: 500px;
+				height: 500px;
+				margin: 50px 0 0 70px;
+				position: relative;
+				float: left;
+				
+			}
+			.second-l ul{
+				/*display: flex;
+				
+				justify-content: center;
+				justify-content:space-around*/
+				
+				
+			}
+			.second-l ul li{
+				float: left;
+				margin: 1px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.second-l ul li:nth-child(1){
+				left: -80px;
+				top: -40px;
+				transform: rotate(30deg);
+			}
+			.second-l ul li:nth-child(2){
+				left: 160px;
+				top: -40px;
+				transform: rotate(90deg);
+			}
+			.second-l ul li:nth-child(3){
+				left: 460px;
+				top: -40px;
+				transform: rotate(-30deg);
+			}
+			.second-l ul li:nth-child(4){
+				left: -20px;
+				top: 180px;
+				transform: rotate(70deg);
+			}
+			.second-l ul li:nth-child(5){
+				left: 180px;
+				top: 180px;
+				transform: rotate(40deg);
+			}
+			.second-l ul li:nth-child(6){
+				left: 420px;
+				top: 180px;
+				transform: rotate(-35deg);
+			}
+			.second-l ul li:nth-child(7){
+				left: -100px;
+				top: 400px;
+				transform: rotate(30deg);
+			}
+			.second-l ul li:nth-child(8){
+				left: 200px;
+				top: 400px;
+				transform: rotate(80deg);
+			}
+			.second-l ul li:nth-child(9){
+				left: 480px;
+				top: 400px;
+				transform: rotate(-70deg);
+			}
+			.second-l ul li img{
+				float: left;
+			}
+			
+			.second-r{
+				float: left;
+				height: 310px;
+				width: 640px;
+				margin: 150px 0 0 100px;
+			}
+			.text {
+				float: left;
+				width: 631px;
+				height: 100%;
+				background: url(img/info_3.png) no-repeat left center;
+			}
+			
+			.circle {
+				
+				float: right;
+				width: 453px;
+				height: 100%;
+				background: url(img/circle.png) no-repeat left center;
+			}
+			
+			
+			.fire {
+				width: 203px;
+				height: 204px;
+				background: url(img/rocket.png) no-repeat ;
+				
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				
+				transition: all 5s;
+			}
+			
+			.fire:hover {
+				transform: translate(300px, -200px);
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="container">
+			<div class="section">第一页
+				<div class="first-t">
+					<img src="img/logo.png">
+				</div>
+				<div class="first-m">
+					<ul>
+						<li><img src="img/text_1.png"></li>
+						<li><img src="img/text_2.png"></li>
+						<li><img src="img/text_3.png"></li>
+						<li><img src="img/text_4.png"></li>
+						<li><img src="img/text_5.png"></li>
+						<li><img src="img/text_6.png"></li>
+						<li><img src="img/text_7.png"></li>
+						<li><img src="img/text_8.png"></li>
+					</ul>
+				</div>
+				<div class="first-d">
+					<img src="img/info_1.png">
+				</div>
+			</div>
+			<div class="section">第二页
+				<div class="second-l">
+					<ul>
+						<li>
+							<img src="img/shield_1.png">
+						</li>
+						<li><img src="img/shield_2.png"></li>
+						<li><img src="img/shield_3.png"></li>
+						<li><img src="img/shield_4.png"></li>
+						<li><img src="img/shield_5.png"></li>
+						<li><img src="img/shield_6.png"></li>
+						<li><img src="img/shield_7.png"></li>
+						<li><img src="img/shield_8.png"></li>
+						<li><img src="img/shield_9.png"></li>
+					</ul>
+				</div>
+				<div class="second-r">
+					<img src="img/info_2.png">
+				</div>
+			</div>
+			<div class="section">第三页
+				<div class="text"></div>
+				
+				<div class="circle"></div>
+				
+				<div class="fire"></div>
+			</div>
+			
+			
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/jquery.fullPage.min.js" ></script>
+<script type="text/javascript">
+	$('.container').fullpage({
+		sectionsColor:["rgb(13,165,214)","rgb(42,186,96)","rgb(222,137,16)"],
+		afterLoad: function(a, b) {
+			
+			if(b == 1){
+				$('.first-m').animate({width:860},2000)
+				
+			}else{
+				$('.first-m').css({width:1100})
+			}
+			if(b == 2){
+				$('.second-l ul li').animate({},2000)
+				$('.second-l ul li').css({position:"static",transform:"rotate(0deg)"},2000)
+			}else{
+				//$('.second-l ul li').css({width:1100})
+			}
+		}
+	})
+</script>

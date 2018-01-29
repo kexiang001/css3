@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body{
+			perspective: 500px;
+			background: #808080;
+		}
+			div{
+				position: relative;
+				width: 120px;
+				height: 200px;
+				background: red;
+				margin: 50px auto;
+				transform: rotate(45deg);
+				border-radius: 100px 100px 0 0;
+				animation: aa 0.5s linear infinite alternate;
+				box-shadow: 10px 0px 12px black;
+			}
+			div::before{
+				content: 'Jullien';
+				width: 120px;
+				height: 100px;
+				display: block;
+				background: red;
+				transform: rotate(-90deg);
+				border-radius: 100px 100px 0 0;
+				position: absolute;
+				left: -90px;
+				top: 90px;
+			}
+			div::after{
+				background: radial-gradient(
+					15opx at center,
+					red,
+					pink
+				);
+			}
+			
+			@keyframes aa{
+				from{transform: rotate(45deg) scale(1);}
+				to{transform: rotate(45deg) scale(1.2);}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="">
+			
+		</div>
+	</body>
+</html>
